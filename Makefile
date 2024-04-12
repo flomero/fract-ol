@@ -4,6 +4,8 @@ CFLAGS = -Wall -Wextra -Werror
 CFILES := \
 	ft_fractol.c \
 	ft_complex_operations.c \
+	ft_parse_input.c \
+	ft_print_errors.c
 
 OBJDIR := obj
 OFILES := $(addprefix $(OBJDIR)/, $(CFILES:.c=.o))

@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fractol.c                                       :+:      :+:    :+:   */
+/*   ft_parse_input.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 17:25:45 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/12 18:27:23 by flfische         ###   ########.fr       */
+/*   Created: 2024/04/12 18:06:19 by flfische          #+#    #+#             */
+/*   Updated: 2024/04/12 18:21:30 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_fractol.h"
 
-int	main(int argc, char **argv)
+int	*ft_get_input_error(void)
 {
-	t_fractol	fractol;
+	static int	error;
 
-	if (argc != 2)
-	{
-		ft_putstr_fd("Error\nInvalid number of arguments\n", 2);
-		return (1);
-	}
-	fractol.fractal = ft_parse_input_fractal(argv[1]);
-	if (*ft_get_input_error() == 1)
-	{
-		ft_print_errors();
-		return (1);
-	}
-	ft_printf("Fractal: %d\n", fractol.fractal);
-	ft_printf("%d", argc);
-	return (0);
+	return (&error);
+}
+
+void	ft_set_input_error(int error)
+{
+	*ft_get_input_error() = error;
+}
+
+t_fractals	ft_parse_input_fractal(char *input)
+{
+	if (ft_strcmp(input, "mandelbrot") == 0)
+		return (mandelbrot);
+	if (ft_strcmp(input, "julia") == 0)
+		return (julia);
+	ft_set_input_error(1);
+	return (mandelbrot);
 }
