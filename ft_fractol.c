@@ -6,13 +6,13 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:45 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/11 17:30:58 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/12 17:39:24 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_fractol.h"
 
-int	main(int argc, char **argv)
+int	main(void)
 {
 	return (0);
 }
