@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:45 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/12 18:27:23 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/13 13:18:40 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 	{
 		ft_putstr_fd("Error\nInvalid number of arguments\n", 2);
+		ft_print_help();
 		return (1);
 	}
 	fractol.fractal = ft_parse_input_fractal(argv[1]);
@@ -28,6 +29,5 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	ft_printf("Fractal: %d\n", fractol.fractal);
-	ft_printf("%d", argc);
 	return (0);
 }

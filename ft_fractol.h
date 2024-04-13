@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/12 18:26:34 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/13 13:17:21 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ t_fractals		ft_parse_input_fractal(char *input);
 int				*ft_get_input_error(void);
 void			ft_set_input_error(int error);
 void			ft_print_errors(void);
+void			ft_print_help(void);
 
 // complex operations
 t_complex		ft_c_addition(t_complex a, t_complex b);
