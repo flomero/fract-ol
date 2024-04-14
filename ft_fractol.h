@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/14 12:45:07 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/14 16:58:00 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ typedef enum e_fractals
 	julia,
 }				t_fractals;
 
-typedef struct ft_fractol
+typedef struct s_fractol
 {
 	t_fractals	fractal;
+	mlx_t		*mlx;
 }				t_fractol;
 
 typedef enum e_errors
@@ -43,6 +44,9 @@ typedef enum e_errors
 
 // input parsing
 t_fractals		ft_parse_input_fractal(char *input);
+
+// user input handling
+void			ft_key_press(void *param);
 
 // error handling
 t_errors		*ft_get_input_error(void);
