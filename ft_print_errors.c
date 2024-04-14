@@ -6,17 +6,25 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:22:33 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/13 13:16:11 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/14 12:46:44 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_fractol.h"
 
-void	ft_print_errors(void)
+void	ft_print_errors(t_errors error, int exit_bool)
 {
-	if (*ft_get_input_error() == 1)
+	if (error)
+		ft_set_input_error(error);
+	if (*ft_get_input_error() == err_no_args)
+		ft_putstr_fd("Error\nInvalid number of arguments\n", 2);
+	else if (*ft_get_input_error() == err_invalid_fractal)
 		ft_putstr_fd("Error\nInvalid fractal\n", 2);
+	else if (*ft_get_input_error() == err_mlx_init_failed)
+		ft_putstr_fd("Error\nFailed to initialize MLX\n", 2);
 	ft_print_help();
+	if (exit_bool)
+		exit(1);
 }
 
 void	ft_print_help(void)

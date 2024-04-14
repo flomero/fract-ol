@@ -6,15 +6,15 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/13 13:17:21 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/14 12:45:07 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_FRACTOL_H
 # define FT_FRACTOL_H
 
+# include "MLX42/include/MLX42/MLX42.h"
 # include "libft/libft.h"
-//# include "MLX42/MLX42.h"
 
 typedef struct s_complex
 {
@@ -33,13 +33,21 @@ typedef struct ft_fractol
 	t_fractals	fractal;
 }				t_fractol;
 
+typedef enum e_errors
+{
+	no_error,
+	err_no_args,
+	err_invalid_fractal,
+	err_mlx_init_failed,
+}				t_errors;
+
 // input parsing
 t_fractals		ft_parse_input_fractal(char *input);
 
 // error handling
-int				*ft_get_input_error(void);
-void			ft_set_input_error(int error);
-void			ft_print_errors(void);
+t_errors		*ft_get_input_error(void);
+void			ft_set_input_error(t_errors error);
+void			ft_print_errors(t_errors error, int exit_bool);
 void			ft_print_help(void);
 
 // complex operations
