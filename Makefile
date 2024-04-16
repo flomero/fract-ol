@@ -7,6 +7,7 @@ CFILES := \
 	ft_parse_input.c \
 	ft_print_errors.c \
 	ft_key_handler.c \
+	ft_mouse_handler.c \
 	ft_mlx_handler.c \
 	ft_mandelbrot.c \
 

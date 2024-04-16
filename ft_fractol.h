@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/16 14:34:31 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/16 16:35:25 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include "MLX42/include/MLX42/MLX42.h"
 # include "libft/libft.h"
 
-# define WIDTH 512
-# define HEIGHT 512
+# define WIDTH 1920
+# define HEIGHT 1080
 # define MAX_ITER 1000
 
 typedef struct s_complex
@@ -32,6 +32,12 @@ typedef enum e_fractals
 	julia,
 }				t_fractals;
 
+typedef struct mouse
+{
+	int			x;
+	int			y;
+}				t_mouse;
+
 typedef struct s_fractol
 {
 	t_fractals	fractal;
@@ -39,6 +45,8 @@ typedef struct s_fractol
 	mlx_image_t	*image;
 	int			max_iter;
 	uint32_t	(*draw_fractal)(struct s_fractol *fractol, int x, int y);
+	int			mouse_x;
+	t_mouse		mouse;
 }				t_fractol;
 
 typedef enum e_errors
@@ -59,6 +67,7 @@ uint32_t		ft_mandelbrot(t_fractol *fractol, int x, int y);
 
 // user input handling
 void			ft_key_press(void *param);
+void			ft_mouse_move(void *param);
 
 // error handling
 t_errors		*ft_get_input_error(void);
