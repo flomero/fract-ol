@@ -6,7 +6,9 @@ CFILES := \
 	ft_complex_operations.c \
 	ft_parse_input.c \
 	ft_print_errors.c \
-	ft_key_handler.c
+	ft_key_handler.c \
+	ft_mlx_handler.c \
+	ft_mandelbrot.c \
 
 OBJDIR := obj
 OFILES := $(addprefix $(OBJDIR)/, $(CFILES:.c=.o))
