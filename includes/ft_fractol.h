@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 10:07:36 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:03:58 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ void		ft_init_fractol(t_fractol *fractol);
 // rendering
 void		ft_draw_image(t_fractol *fractol);
 uint32_t	ft_mandelbrot(t_fractol *fractol, int x, int y);
+// color
+uint32_t	ft_get_color(t_fractol *fractol, int i);
+// color modes
+uint32_t	ft_monochrome(t_fractol *fractol, int i);
+uint32_t	ft_duotone(t_fractol *fractol, int i, uint32_t color1,
+				uint32_t color2);
+uint32_t	ft_default_color(t_fractol *fractol, int i);
 
 // user input handling
 void		ft_key_press(void *param);

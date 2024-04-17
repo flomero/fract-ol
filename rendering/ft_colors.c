@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_defines.h                                       :+:      :+:    :+:   */
+/*   ft_colors.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 09:30:41 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 15:04:07 by flfische         ###   ########.fr       */
+/*   Created: 2024/04/17 14:59:53 by flfische          #+#    #+#             */
+/*   Updated: 2024/04/17 15:05:07 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_DEFINES_H
-# define FT_DEFINES_H
+#include "../includes/ft_fractol.h"
 
-# define WIDTH 1920
-# define HEIGHT 1080
-# define MAX_ITER 40
-# define INIT_ZOOM 350
-# define ZOOM_FACTOR 1.1
-# define MOVE_SIZE 5
-
-#endif
+uint32_t	ft_get_color(t_fractol *fractol, int i)
+{
+	if (fractol->colormode == monochrome)
+		return (ft_monochrome(fractol, i));
+	else if (fractol->colormode == duotone)
+		return (ft_duotone(fractol, i, 0xff0ff0ff, 0x00ff00ff));
+	return (ft_default_color(fractol, i));
+}

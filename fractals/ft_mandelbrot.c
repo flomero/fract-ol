@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:48:24 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 13:15:06 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:04:05 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ uint32_t	ft_mandelbrot(t_fractol *fractol, int x, int y)
 	}
 	if (i == fractol->max_iter)
 		return (0x000000ff);
-	return (0xfcba03ff * i);
+	return (ft_get_color(fractol, i));
 }

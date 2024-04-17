@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -Ofast
 
 CFILES := \
 	ft_fractol.c \
@@ -11,6 +11,8 @@ CFILES := \
 	input_handlers/ft_mouse_handler.c \
 	input_handlers/ft_scroll_handler.c \
 	rendering/ft_mlx_handler.c \
+	rendering/ft_colors.c \
+	rendering/ft_colormodes.c \
 	fractals/ft_mandelbrot.c \
 
 OBJDIR := obj
