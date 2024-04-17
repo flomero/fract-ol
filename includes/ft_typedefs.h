@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:32:00 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 16:54:05 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:04:26 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ typedef enum e_errors
 	err_no_args,
 	err_invalid_fractal,
 	err_mlx_init_failed,
+	err_mlx_new_image_failed,
+	err_mlx_image_to_window_failed
 }					t_errors;
 
 #endif

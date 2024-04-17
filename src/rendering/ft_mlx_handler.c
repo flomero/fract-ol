@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:54:15 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 16:18:08 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:02:53 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ void	ft_init_mlx(t_fractol *fractol)
 		ft_print_errors(err_mlx_init_failed, 1);
 	fractol->image = mlx_new_image(fractol->mlx, WIDTH, HEIGHT);
 	if (!fractol->image)
-		ft_print_errors(err_mlx_init_failed, 1);
-	mlx_image_to_window(fractol->mlx, fractol->image, 0, 0);
+		ft_print_errors(err_mlx_new_image_failed, 1);
+	if (mlx_image_to_window(fractol->mlx, fractol->image, 0, 0) == -1)
+		ft_print_errors(err_mlx_image_to_window_failed, 1);
 }
 
 void	ft_draw_image(t_fractol *fractol)
