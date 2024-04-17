@@ -6,22 +6,37 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:02:18 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 10:20:04 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 13:27:56 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_fractol.h"
-#include <stdio.h>
 
 void	ft_scroll(double xdelta, double ydelta, void *param)
 {
 	t_fractol	*fractol;
 
 	fractol = (t_fractol *)param;
-	if (ydelta > 0)
+	if (ydelta < 0)
+	{
+		fractol->offset.x = (fractol->mouse.x / fractol->zoom
+				+ fractol->offset.x) - (fractol->mouse.x / (fractol->zoom
+					* ZOOM_FACTOR));
+		fractol->offset.y = (fractol->mouse.y / fractol->zoom
+				+ fractol->offset.y) - (fractol->mouse.y / (fractol->zoom
+					* ZOOM_FACTOR));
 		fractol->zoom *= ZOOM_FACTOR;
-	else if (ydelta < 0)
+	}
+	else if (ydelta > 0)
+	{
+		fractol->offset.x = (fractol->mouse.x / fractol->zoom
+				+ fractol->offset.x) - (fractol->mouse.x / (fractol->zoom
+					/ ZOOM_FACTOR));
+		fractol->offset.y = (fractol->mouse.y / fractol->zoom
+				+ fractol->offset.y) - (fractol->mouse.y / (fractol->zoom
+					/ ZOOM_FACTOR));
 		fractol->zoom /= ZOOM_FACTOR;
+	}
 	(void)xdelta;
-	printf("Zoom: %f\n", fractol->zoom);
+	ft_draw_image(fractol);
 }

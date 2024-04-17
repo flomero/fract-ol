@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:48:24 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 09:45:26 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 13:15:06 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ uint32_t	ft_mandelbrot(t_fractol *fractol, int x, int y)
 	z.re = 0;
 	z.im = 0;
 	i = 0;
-	c.re = (x - WIDTH / 2) * 4.0 / WIDTH;
-	c.im = (y - HEIGHT / 2) * 4.0 / HEIGHT;
+	c.re = (x / fractol->zoom) + fractol->offset.x;
+	c.im = (y / fractol->zoom) + fractol->offset.y;
 	while (z.re * z.re + z.im * z.im < 4 && i < fractol->max_iter)
 	{
 		tmp = ft_c_addition(ft_c_multiplication(z, z), c);
@@ -32,5 +32,5 @@ uint32_t	ft_mandelbrot(t_fractol *fractol, int x, int y)
 	}
 	if (i == fractol->max_iter)
 		return (0x000000ff);
-	return (0xfcba03ff * i / fractol->max_iter);
+	return (0xfcba03ff * i);
 }
