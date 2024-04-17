@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:58:15 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 16:18:08 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:58:17 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ uint32_t	ft_default_color(t_fractol *fractol, int i)
 	double		t;
 
 	t = (double)i / (double)fractol->max_iter;
+	t += fractol->color_shift;
+	while (t > 1.0)
+		t -= 1.0;
+	while (t < 0.0)
+		t += 1.0;
 	color.r = (int)(9 * (1 - t) * t * t * t * 255);
 	color.g = (int)(15 * (1 - t) * (1 - t) * t * t * 255);
 	color.b = (int)(8.5 * (1 - t) * (1 - t) * (1 - t) * t * 255);

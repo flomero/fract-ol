@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:48:37 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 16:47:00 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:07:26 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ void	ft_keys_options(void *param)
 	fractol = (t_fractol *)param;
 	if (mlx_is_key_down(fractol->mlx, MLX_KEY_ESCAPE))
 		ft_escape(fractol);
+	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_DIVIDE))
+		fr_reset_zoom(fractol);
+	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_ADD))
+		fractol->max_iter += 10;
+	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_SUBTRACT))
+		fractol->max_iter -= 10;
 	else
 		return ;
 	ft_draw_image(fractol);
@@ -72,6 +78,10 @@ void	ft_keys_colormode(void *param)
 		fractol->colormode = duotone;
 	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_3))
 		fractol->colormode = gradient;
+	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_4))
+		fractol->color_shift += COLOR_SHIFT;
+	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_5))
+		fractol->color_shift += COLOR_SHIFT * 10;
 	else
 		return ;
 	ft_draw_image(fractol);

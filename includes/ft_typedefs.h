@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:32:00 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 16:01:04 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:54:05 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ typedef struct s_fractol
 	t_dpoint		offset;
 	t_dpoint		center;
 	t_colormodes	colormode;
+	double			color_shift;
 }					t_fractol;
 
 typedef enum e_errors

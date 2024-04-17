@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:30:41 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 15:04:07 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:58:40 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@
 # define INIT_ZOOM 350
 # define ZOOM_FACTOR 1.1
 # define MOVE_SIZE 5
+# define COLOR_SHIFT 0.01
 
 #endif
