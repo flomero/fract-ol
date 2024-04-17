@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mouse_handler.c                                 :+:      :+:    :+:   */
+/*   ft_key_handler.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 16:26:38 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 09:34:51 by flfische         ###   ########.fr       */
+/*   Created: 2024/04/14 16:48:37 by flfische          #+#    #+#             */
+/*   Updated: 2024/04/17 09:40:06 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_fractol.h"
+#include "../includes/ft_fractol.h"
 
-void	ft_mouse_move(void *param)
+void	ft_key_press(void *param)
 {
 	t_fractol	*fractol;
-	int			x;
-	int			y;
 
 	fractol = (t_fractol *)param;
-	mlx_get_mouse_pos(fractol->mlx, &x, &y);
-	fractol->mouse.x = x;
-	fractol->mouse.y = y;
+	if (mlx_is_key_down(fractol->mlx, MLX_KEY_ESCAPE))
+	{
+		mlx_terminate(fractol->mlx);
+		exit(0);
+	}
 }

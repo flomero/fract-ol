@@ -3,14 +3,14 @@ CFLAGS = -Wall -Wextra -Werror
 
 CFILES := \
 	ft_fractol.c \
-	ft_complex_operations.c \
-	ft_parse_input.c \
-	ft_init_fractol.c \
-	ft_print_errors.c \
-	ft_key_handler.c \
-	ft_mouse_handler.c \
-	ft_mlx_handler.c \
-	ft_mandelbrot.c \
+	maths/ft_complex_operations.c \
+	parsing/ft_parse_input.c \
+	parsing/ft_init_fractol.c \
+	errors/ft_print_errors.c \
+	input_handlers/ft_key_handler.c \
+	input_handlers/ft_mouse_handler.c \
+	rendering/ft_mlx_handler.c \
+	fractals/ft_mandelbrot.c \
 
 OBJDIR := obj
 OFILES := $(addprefix $(OBJDIR)/, $(CFILES:.c=.o))
@@ -43,6 +43,7 @@ $(NAME): $(LIBFT) $(MLX42) $(OBJDIR) $(OFILES)
 
 $(OBJDIR)/%.o: %.c $(HEADER)
 	@echo "$(YELLOW)Compiling $<...$(NC)"
+	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -I. -I$(INC_DIR) -c $< -o $@
 
 $(OBJDIR):
