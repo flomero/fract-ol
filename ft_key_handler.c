@@ -6,11 +6,11 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:48:37 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/14 16:57:46 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 09:34:46 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_fractol.h"
+#include "includes/ft_fractol.h"
 
 void	ft_key_press(void *param)
 {

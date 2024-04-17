@@ -6,11 +6,11 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:54:15 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/16 14:29:40 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 09:34:50 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_fractol.h"
+#include "includes/ft_fractol.h"
 
 void	ft_init_mlx(t_fractol *fractol)
 {

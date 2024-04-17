@@ -30,8 +30,9 @@ else ifeq ($(shell uname),Linux)
 	MLX42_FLAGS = -L$(MLX42_DIR)/build -lmlx42 -Iinclude -ldl -lglfw -pthread -lm
 endif
 
-
-HEADER := ft_fractol.h
+INC_DIR := includes
+HEADER := ft_fractol.h ft_typedefs.h ft_defines.h
+HEADER := $(addprefix $(INC_DIR)/, $(HEADER))
 
 all: $(NAME)
 
@@ -42,7 +43,7 @@ $(NAME): $(LIBFT) $(MLX42) $(OBJDIR) $(OFILES)
 
 $(OBJDIR)/%.o: %.c $(HEADER)
 	@echo "$(YELLOW)Compiling $<...$(NC)"
-	@$(CC) $(CFLAGS) -I. -c $< -o $@
+	@$(CC) $(CFLAGS) -I. -I$(INC_DIR) -c $< -o $@
 
 $(OBJDIR):
 	@echo "$(YELLOW)Creating obj directory...$(NC)"

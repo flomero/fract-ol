@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_fractol.c                                  :+:      :+:    :+:   */
+/*   ft_defines.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 09:09:25 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 09:34:45 by flfische         ###   ########.fr       */
+/*   Created: 2024/04/17 09:30:41 by flfische          #+#    #+#             */
+/*   Updated: 2024/04/17 09:31:10 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_fractol.h"
+#ifndef FT_DEFINES_H
+# define FT_DEFINES_H
 
-void	ft_init_fractol(t_fractol *fractol)
-{
-	fractol->max_iter = MAX_ITER;
-	fractol->zoom = 1;
-	if (fractol->fractal == mandelbrot)
-		fractol->draw_fractal = &ft_mandelbrot;
-	ft_init_mlx(fractol);
-}
+# define WIDTH 1920
+# define HEIGHT 1080
+# define MAX_ITER 1000
+
+#endif

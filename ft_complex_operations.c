@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_complex_math.c                                  :+:      :+:    :+:   */
+/*   ft_complex_operations.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 17:47:15 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/12 17:59:19 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 09:34:41 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_fractol.h"
+#include "includes/ft_fractol.h"
 
 t_complex	ft_c_addition(t_complex a, t_complex b)
 {
