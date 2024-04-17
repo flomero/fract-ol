@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:45 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 09:34:42 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 10:07:16 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	main(int argc, char **argv)
 	ft_init_fractol(&fractol);
 	mlx_loop_hook(fractol.mlx, &ft_key_press, &fractol);
 	mlx_loop_hook(fractol.mlx, &ft_mouse_move, &fractol);
+	mlx_scroll_hook(fractol.mlx, &ft_scroll, &fractol);
 	ft_draw_image(&fractol);
 	mlx_loop(fractol.mlx);
 	mlx_terminate(fractol.mlx);

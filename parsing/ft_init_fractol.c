@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:09:25 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 09:34:45 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 10:39:02 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_init_fractol(t_fractol *fractol)
 {
 	fractol->max_iter = MAX_ITER;
-	fractol->zoom = 1;
+	fractol->zoom = INIT_ZOOM;
 	if (fractol->fractal == mandelbrot)
 		fractol->draw_fractal = &ft_mandelbrot;
 	ft_init_mlx(fractol);

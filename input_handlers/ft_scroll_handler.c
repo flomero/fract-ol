@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_defines.h                                       :+:      :+:    :+:   */
+/*   ft_scroll_handler.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 09:30:41 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 10:38:57 by flfische         ###   ########.fr       */
+/*   Created: 2024/04/17 10:02:18 by flfische          #+#    #+#             */
+/*   Updated: 2024/04/17 10:20:04 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_DEFINES_H
-# define FT_DEFINES_H
+#include "../includes/ft_fractol.h"
+#include <stdio.h>
 
-# define WIDTH 1920
-# define HEIGHT 1080
-# define MAX_ITER 1000
-# define INIT_ZOOM 1.5
-# define ZOOM_FACTOR 1.1
+void	ft_scroll(double xdelta, double ydelta, void *param)
+{
+	t_fractol	*fractol;
 
-#endif
+	fractol = (t_fractol *)param;
+	if (ydelta > 0)
+		fractol->zoom *= ZOOM_FACTOR;
+	else if (ydelta < 0)
+		fractol->zoom /= ZOOM_FACTOR;
+	(void)xdelta;
+	printf("Zoom: %f\n", fractol->zoom);
+}

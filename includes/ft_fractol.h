@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 09:34:01 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 10:07:36 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ uint32_t	ft_mandelbrot(t_fractol *fractol, int x, int y);
 // user input handling
 void		ft_key_press(void *param);
 void		ft_mouse_move(void *param);
+void		ft_scroll(double xdelta, double ydelta, void *param);
 
 // error handling
 t_errors	*ft_get_input_error(void);

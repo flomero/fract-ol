@@ -9,6 +9,7 @@ CFILES := \
 	errors/ft_print_errors.c \
 	input_handlers/ft_key_handler.c \
 	input_handlers/ft_mouse_handler.c \
+	input_handlers/ft_scroll_handler.c \
 	rendering/ft_mlx_handler.c \
 	fractals/ft_mandelbrot.c \
 
