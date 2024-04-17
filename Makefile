@@ -5,6 +5,7 @@ CFILES := \
 	ft_fractol.c \
 	ft_complex_operations.c \
 	ft_parse_input.c \
+	ft_init_fractol.c \
 	ft_print_errors.c \
 	ft_key_handler.c \
 	ft_mouse_handler.c \

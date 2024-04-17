@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/16 16:35:25 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 09:12:19 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,9 @@ typedef struct s_fractol
 	mlx_image_t	*image;
 	int			max_iter;
 	uint32_t	(*draw_fractal)(struct s_fractol *fractol, int x, int y);
-	int			mouse_x;
 	t_mouse		mouse;
+	float		zoom;
+	t_complex	offset;
 }				t_fractol;
 
 typedef enum e_errors
@@ -60,6 +61,7 @@ typedef enum e_errors
 // input parsing
 t_fractals		ft_parse_input_fractal(char *input);
 void			ft_init_mlx(t_fractol *fractol);
+void			ft_init_fractol(t_fractol *fractol);
 
 // rendering
 void			ft_draw_image(t_fractol *fractol);
