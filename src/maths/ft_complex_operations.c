@@ -6,11 +6,11 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 17:47:15 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 09:46:07 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:18:08 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_fractol.h"
+#include "../../includes/ft_fractol.h"
 
 t_complex	ft_c_addition(t_complex a, t_complex b)
 {

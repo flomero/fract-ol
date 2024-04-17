@@ -6,11 +6,11 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:58:15 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 15:05:21 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:18:08 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_fractol.h"
+#include "../../includes/ft_fractol.h"
 
 uint32_t	ft_monochrome(t_fractol *fractol, int i)
 {

@@ -6,11 +6,11 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:48:24 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 15:04:05 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:18:08 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_fractol.h"
+#include "../../includes/ft_fractol.h"
 
 uint32_t	ft_mandelbrot(t_fractol *fractol, int x, int y)
 {

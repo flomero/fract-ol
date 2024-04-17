@@ -15,6 +15,8 @@ CFILES := \
 	rendering/ft_colormodes.c \
 	fractals/ft_mandelbrot.c \
 
+CFILES := $(addprefix src/, $(CFILES))
+
 OBJDIR := obj
 OFILES := $(addprefix $(OBJDIR)/, $(CFILES:.c=.o))
 
