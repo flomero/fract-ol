@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 15:03:58 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:48:05 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,11 @@ uint32_t	ft_duotone(t_fractol *fractol, int i, uint32_t color1,
 uint32_t	ft_default_color(t_fractol *fractol, int i);
 
 // user input handling
-void		ft_key_press(void *param);
 void		ft_mouse_move(void *param);
 void		ft_scroll(double xdelta, double ydelta, void *param);
+void		ft_keys_options(void *param);
+void		ft_keys_colormode(void *param);
+void		ft_keys_movement(void *param);
 
 // error handling
 t_errors	*ft_get_input_error(void);

@@ -6,22 +6,42 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:48:37 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 16:18:08 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:47:00 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_fractol.h"
 
-void	ft_key_press(void *param)
+void	ft_escape(t_fractol *fractol)
+{
+	mlx_terminate(fractol->mlx);
+	exit(0);
+}
+
+void	fr_reset_zoom(t_fractol *fractol)
+{
+	fractol->zoom = INIT_ZOOM;
+	fractol->offset.x = -3;
+	fractol->offset.y = -1.5;
+}
+
+void	ft_keys_options(void *param)
 {
 	t_fractol	*fractol;
 
 	fractol = (t_fractol *)param;
 	if (mlx_is_key_down(fractol->mlx, MLX_KEY_ESCAPE))
-	{
-		mlx_terminate(fractol->mlx);
-		exit(0);
-	}
+		ft_escape(fractol);
+	else
+		return ;
+	ft_draw_image(fractol);
+}
+
+void	ft_keys_movement(void *param)
+{
+	t_fractol	*fractol;
+
+	fractol = (t_fractol *)param;
 	if (mlx_is_key_down(fractol->mlx, MLX_KEY_UP)
 		|| mlx_is_key_down(fractol->mlx, MLX_KEY_W))
 		fractol->offset.y -= MOVE_SIZE / fractol->zoom;
@@ -34,6 +54,24 @@ void	ft_key_press(void *param)
 	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_RIGHT)
 		|| mlx_is_key_down(fractol->mlx, MLX_KEY_D))
 		fractol->offset.x += MOVE_SIZE / fractol->zoom;
+	else
+		return ;
+	ft_draw_image(fractol);
+}
+
+void	ft_keys_colormode(void *param)
+{
+	t_fractol	*fractol;
+
+	fractol = (t_fractol *)param;
+	if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_0))
+		fractol->colormode = normal;
+	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_1))
+		fractol->colormode = monochrome;
+	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_2))
+		fractol->colormode = duotone;
+	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_3))
+		fractol->colormode = gradient;
 	else
 		return ;
 	ft_draw_image(fractol);
