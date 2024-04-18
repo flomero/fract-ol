@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 13:26:39 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 15:14:52 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,13 @@ void		ft_keys_movement(void *param);
 
 // overlay
 void		ft_init_overlay(t_fractol *fractol);
+void		ft_overlay_refresh(t_fractol *fractol);
 void		ft_draw_overlay(t_fractol *fractol);
 void		ft_overlay_bg(t_fractol *fractol);
+void		ft_overlay_text(t_fractol *fractol);
+// dynamic overlay texts
+void		ft_ov_zoom(t_fractol *fractol, int x, int y);
+void		ft_ov_iterations(t_fractol *fractol, int x, int y);
 
 // error handling
 t_errors	*ft_get_input_error(void);

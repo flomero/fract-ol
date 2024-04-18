@@ -18,6 +18,7 @@ CFILES := \
 	fractals/ft_julia.c \
 	fractals/ft_burningship.c \
 	overlay/ft_overlay.c \
+	overlay/ft_overlay_dynamic.c \
 
 CFILES := $(addprefix src/, $(CFILES))
 

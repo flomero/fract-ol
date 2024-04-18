@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:32:00 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 13:28:30 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 15:03:58 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,8 @@ typedef enum e_errors
 	err_invalid_julia,
 	err_mlx_init_failed,
 	err_mlx_new_image_failed,
-	err_mlx_image_to_window_failed
+	err_mlx_image_to_window_failed,
+	err_malloc_failed,
 }					t_errors;
 
 #endif

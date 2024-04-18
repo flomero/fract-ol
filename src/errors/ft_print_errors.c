@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:22:33 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 14:16:39 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 15:06:18 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void	ft_print_errors(t_errors error, int exit_bool)
 		ft_putstr_fd(ERRMSG_MLX_NEW_IMG, 2);
 	else if (*ft_get_input_error() == err_mlx_image_to_window_failed)
 		ft_putstr_fd(ERRMSG_MLX_IMAGE_TO_WINDOW, 2);
+	else if (*ft_get_input_error() == err_malloc_failed)
+		ft_putstr_fd(ERRMSG_MALLOC, 2);
 	ft_print_help();
 	if (exit_bool)
 		exit(1);

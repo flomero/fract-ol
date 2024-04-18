@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:22:48 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 13:43:37 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 15:27:07 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,31 @@ void	ft_draw_overlay(t_fractol *fractol)
 	if (mlx_image_to_window(fractol->mlx, fractol->overlay.image,
 			fractol->overlay.pos.x, fractol->overlay.pos.y) == -1)
 		ft_print_errors(err_mlx_image_to_window_failed, 1);
+	ft_overlay_bg(fractol);
+	ft_overlay_text(fractol);
+}
+
+void	ft_overlay_refresh(t_fractol *fractol)
+{
+	ft_ov_zoom(fractol, fractol->size.x + 200, 190);
+	ft_ov_iterations(fractol, fractol->size.x + 200, 210);
+}
+
+void	ft_overlay_text(t_fractol *fractol)
+{
+	int	x;
+
+	x = 10 + fractol->size.x;
+	mlx_put_string(fractol->mlx, "Fractol", x, 10);
+	mlx_put_string(fractol->mlx, "Controls", x, 30);
+	mlx_put_string(fractol->mlx, "Move: W A S D / Arrows", x, 50);
+	mlx_put_string(fractol->mlx, "Zoom: Scroll", x, 70);
+	mlx_put_string(fractol->mlx, "Change Fractal: 1 2 3", x, 90);
+	mlx_put_string(fractol->mlx, "Change Color Mode: Numpad 0-3", x, 110);
+	mlx_put_string(fractol->mlx, "Reset: R", x, 130);
+	mlx_put_string(fractol->mlx, "Exit: ESC", x, 150);
+	mlx_put_string(fractol->mlx, "Fractals", x, 170);
+	mlx_put_string(fractol->mlx, "Zoom:", x, 190);
+	mlx_put_string(fractol->mlx, "Iterations:", x, 210);
+	ft_overlay_refresh(fractol);
 }

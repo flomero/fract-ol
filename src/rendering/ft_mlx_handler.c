@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:54:15 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 13:44:57 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 15:17:39 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ void	ft_draw_image(t_fractol *fractol)
 		}
 		y++;
 	}
+	ft_overlay_refresh(fractol);
 }
