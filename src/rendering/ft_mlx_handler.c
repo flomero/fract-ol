@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:54:15 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 15:17:39 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:07:07 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 void	ft_init_mlx(t_fractol *fractol)
 {
-	fractol->mlx = mlx_init(WIDTH, HEIGHT, "Fractol", 0);
+	static int	is_initialized;
+
+	if (!is_initialized)
+		fractol->mlx = mlx_init(WIDTH, HEIGHT, "Fractol", 0);
 	if (!fractol->mlx)
 		ft_print_errors(err_mlx_init_failed, 1);
+	is_initialized = 1;
 	fractol->image = mlx_new_image(fractol->mlx, fractol->size.x,
 			fractol->size.y);
 	if (!fractol->image)

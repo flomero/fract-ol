@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:09:25 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 14:08:01 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:16:27 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	ft_init_julia(t_fractol *fractol)
 	fractol->draw_fractal = &ft_julia;
 	fractol->offset.x = -2.5;
 	fractol->offset.y = -1.5;
+	fractol->julia.re = JULIA_DEFAULT_RE;
+	fractol->julia.im = JULIA_DEFAULT_IM;
 }
 
 void	ft_init_burningship(t_fractol *fractol)

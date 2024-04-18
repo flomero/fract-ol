@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:22:48 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 15:27:07 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:22:12 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void	ft_overlay_refresh(t_fractol *fractol)
 {
 	ft_ov_zoom(fractol, fractol->size.x + 200, 190);
 	ft_ov_iterations(fractol, fractol->size.x + 200, 210);
+	ft_ov_title(fractol, fractol->size.x + 200, 170);
 }
 
 void	ft_overlay_text(t_fractol *fractol)

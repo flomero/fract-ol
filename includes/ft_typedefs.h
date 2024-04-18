@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:32:00 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 15:03:58 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:22:53 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_complex
 
 typedef enum e_fractals
 {
+	undefined,
 	mandelbrot,
 	julia,
 	burningship,

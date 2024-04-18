@@ -11,6 +11,7 @@ CFILES := \
 	input_handlers/ft_key_handler.c \
 	input_handlers/ft_mouse_handler.c \
 	input_handlers/ft_scroll_handler.c \
+	input_handlers/ft_fractal_change.c \
 	rendering/ft_mlx_handler.c \
 	rendering/ft_colors.c \
 	rendering/ft_colormodes.c \

@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:30:41 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 13:17:39 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:20:17 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,9 @@
 # define JULIA_ROT_ANGLE 0.1
 
 # define PI 3.14159265358979323846
+
+# define TITLE_MANDELBROT "Mandelbrot"
+# define TITLE_JULIA "Julia"
+# define TITLE_BURNINGSHIP "Burningship"
 
 #endif
