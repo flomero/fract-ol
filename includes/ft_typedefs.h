@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:32:00 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 16:22:53 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:43:23 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ typedef struct s_fractol
 	t_mouse			mouse;
 	double			zoom;
 	t_dpoint		offset;
+	t_dpoint		init_offset;
 	t_dpoint		center;
 	t_point			size;
 	t_colormodes	colormode;

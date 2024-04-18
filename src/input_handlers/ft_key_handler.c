@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:48:37 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 09:36:22 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:43:38 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	ft_escape(t_fractol *fractol)
 void	fr_reset_zoom(t_fractol *fractol)
 {
 	fractol->zoom = INIT_ZOOM;
-	fractol->offset.x = -3;
-	fractol->offset.y = -1.5;
+	fractol->offset.x = fractol->init_offset.x;
+	fractol->offset.y = fractol->init_offset.y;
 }
 
 void	ft_keys_options(void *param)
@@ -32,7 +32,7 @@ void	ft_keys_options(void *param)
 	fractol = (t_fractol *)param;
 	if (mlx_is_key_down(fractol->mlx, MLX_KEY_ESCAPE))
 		ft_escape(fractol);
-	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_DIVIDE))
+	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_R))
 		fr_reset_zoom(fractol);
 	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_ADD))
 		fractol->max_iter += 10;

@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:22:48 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 16:22:12 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:58:02 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ void	ft_draw_overlay(t_fractol *fractol)
 
 void	ft_overlay_refresh(t_fractol *fractol)
 {
-	ft_ov_zoom(fractol, fractol->size.x + 200, 190);
-	ft_ov_iterations(fractol, fractol->size.x + 200, 210);
-	ft_ov_title(fractol, fractol->size.x + 200, 170);
+	ft_ov_zoom(fractol, fractol->size.x + 200, 230);
+	ft_ov_iterations(fractol, fractol->size.x + 200, 250);
+	ft_ov_title(fractol, fractol->size.x + 200, 210);
 }
 
 void	ft_overlay_text(t_fractol *fractol)
@@ -70,14 +70,17 @@ void	ft_overlay_text(t_fractol *fractol)
 	x = 10 + fractol->size.x;
 	mlx_put_string(fractol->mlx, "Fractol", x, 10);
 	mlx_put_string(fractol->mlx, "Controls", x, 30);
-	mlx_put_string(fractol->mlx, "Move: W A S D / Arrows", x, 50);
+	mlx_put_string(fractol->mlx, "Move: WASD / Arrows / Left Mouse + Drag", x,
+		50);
 	mlx_put_string(fractol->mlx, "Zoom: Scroll", x, 70);
 	mlx_put_string(fractol->mlx, "Change Fractal: 1 2 3", x, 90);
 	mlx_put_string(fractol->mlx, "Change Color Mode: Numpad 0-3", x, 110);
-	mlx_put_string(fractol->mlx, "Reset: R", x, 130);
-	mlx_put_string(fractol->mlx, "Exit: ESC", x, 150);
-	mlx_put_string(fractol->mlx, "Fractals", x, 170);
-	mlx_put_string(fractol->mlx, "Zoom:", x, 190);
-	mlx_put_string(fractol->mlx, "Iterations:", x, 210);
+	mlx_put_string(fractol->mlx, "Rotate Color Slow: Numpad 4", x, 130);
+	mlx_put_string(fractol->mlx, "Rotate Color Fast: Numpad 5", x, 150);
+	mlx_put_string(fractol->mlx, "Reset Zoom: R", x, 170);
+	mlx_put_string(fractol->mlx, "Exit: ESC", x, 190);
+	mlx_put_string(fractol->mlx, "Fractal", x, 210);
+	mlx_put_string(fractol->mlx, "Zoom:", x, 230);
+	mlx_put_string(fractol->mlx, "Iterations:", x, 250);
 	ft_overlay_refresh(fractol);
 }
