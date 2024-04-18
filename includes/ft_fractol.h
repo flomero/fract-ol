@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 09:18:41 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 11:24:16 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void		ft_draw_image(t_fractol *fractol);
 uint32_t	ft_mandelbrot(t_fractol *fractol, int x, int y);
 uint32_t	ft_julia(t_fractol *fractol, int x, int y);
 void		ft_rot_julia(t_fractol *fractol);
+uint32_t	ft_burningship(t_fractol *fractol, int x, int y);
 
 // color
 uint32_t	ft_get_color(t_fractol *fractol, int i);
@@ -58,5 +59,7 @@ t_complex	ft_c_subtraction(t_complex minund, t_complex subtrahend);
 t_complex	ft_c_multiplication(t_complex a, t_complex b);
 t_complex	ft_c_division(t_complex dividend, t_complex divisor);
 t_complex	ft_c_power(t_complex base, int exponent);
+// math utils
+double		ft_dabs(double x);
 
 #endif

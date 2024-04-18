@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:06:19 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 16:19:02 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 11:17:16 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ t_fractals	ft_parse_input_fractal(char *input)
 		return (mandelbrot);
 	if (ft_strcmp(input, "julia") == 0)
 		return (julia);
+	if (ft_strcmp(input, "burningship") == 0)
+		return (burningship);
 	ft_set_input_error(err_invalid_fractal);
 	return (mandelbrot);
 }

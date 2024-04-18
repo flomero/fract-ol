@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:32:00 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 09:26:44 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 11:17:27 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef enum e_fractals
 {
 	mandelbrot,
 	julia,
+	burningship,
 }					t_fractals;
 
 typedef struct s_mouse

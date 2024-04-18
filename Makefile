@@ -4,6 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -Ofast
 CFILES := \
 	ft_fractol.c \
 	maths/ft_complex_operations.c \
+	maths/ft_math_utils.c \
 	parsing/ft_parse_input.c \
 	parsing/ft_init_fractol.c \
 	errors/ft_print_errors.c \
@@ -15,6 +16,7 @@ CFILES := \
 	rendering/ft_colormodes.c \
 	fractals/ft_mandelbrot.c \
 	fractals/ft_julia.c \
+	fractals/ft_burningship.c \
 
 CFILES := $(addprefix src/, $(CFILES))
 
