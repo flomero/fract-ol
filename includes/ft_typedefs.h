@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:32:00 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 11:17:27 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 13:28:30 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,15 @@ typedef struct s_color
 	uint8_t			b;
 }					t_color;
 
+typedef struct s_overlay
+{
+	t_point			size;
+	t_point			pos;
+	uint32_t		background;
+	uint32_t		text;
+	mlx_image_t		*image;
+}					t_overlay;
+
 typedef struct s_fractol
 {
 	t_fractals		fractal;
@@ -73,9 +82,12 @@ typedef struct s_fractol
 	double			zoom;
 	t_dpoint		offset;
 	t_dpoint		center;
+	t_point			size;
 	t_colormodes	colormode;
 	double			color_shift;
 	t_complex		julia;
+	int				active_overlay;
+	t_overlay		overlay;
 }					t_fractol;
 
 typedef enum e_errors

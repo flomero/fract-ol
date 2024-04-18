@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 08:54:15 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 09:33:14 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 14:06:28 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,21 @@ int	ft_is_double(char *str)
 
 void	ft_get_julia_input(t_fractol *fractol, int argc, char **argv)
 {
-	if (argc == 2)
+	int	o;
+
+	o = fractol->active_overlay;
+	if (argc == 2 + o)
 	{
 		fractol->julia.re = JULIA_DEFAULT_RE;
 		fractol->julia.im = JULIA_DEFAULT_IM;
 		return ;
 	}
-	else if (argc != 4)
+	else if (argc != 4 + o)
 		ft_print_errors(err_invalid_julia, 1);
-	if (!ft_is_double(argv[2]) || !ft_is_double(argv[3]))
+	if (!ft_is_double(argv[2 + o]) || !ft_is_double(argv[3 + o]))
 		ft_print_errors(err_invalid_julia, 1);
-	fractol->julia.re = ft_atod(argv[2]);
-	fractol->julia.im = ft_atod(argv[3]);
+	fractol->julia.re = ft_atod(argv[2 + o]);
+	fractol->julia.im = ft_atod(argv[3 + o]);
 	if (fractol->julia.re < -2 || fractol->julia.re > 2)
 		ft_print_errors(err_invalid_julia, 1);
 	if (fractol->julia.im < -2 || fractol->julia.im > 2)

@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:09:25 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 11:26:24 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 14:08:01 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@ void	ft_init_fractol(t_fractol *fractol)
 	fractol->max_iter = MAX_ITER;
 	fractol->zoom = INIT_ZOOM;
 	fractol->color_shift = 0.0;
+	fractol->size.x = WIDTH;
+	fractol->size.y = HEIGHT;
+	if (fractol->active_overlay)
+		ft_init_overlay(fractol);
 	if (fractol->fractal == mandelbrot)
 		ft_init_mandebrot(fractol);
 	else if (fractol->fractal == julia)
@@ -47,4 +51,6 @@ void	ft_init_fractol(t_fractol *fractol)
 	else if (fractol->fractal == burningship)
 		ft_init_burningship(fractol);
 	ft_init_mlx(fractol);
+	if (fractol->active_overlay)
+		ft_draw_overlay(fractol);
 }

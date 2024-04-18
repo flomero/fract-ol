@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:22:33 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 09:34:21 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 14:16:39 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ void	ft_print_errors(t_errors error, int exit_bool)
 void	ft_print_help(void)
 {
 	ft_printf("------------------\n");
-	ft_printf("Usage: ./fractol [fractal]\n");
+	ft_printf("Usage: ./fractol [options] [fractal]\n");
+	ft_printf("Options:\n");
+	ft_printf("\t-o\t\t\tActivate overlay\n");
 	ft_printf("Available Fractals:\n");
 	ft_printf("\tmandelbrot\n");
 	ft_printf("\tjulia [re] [im] (re & im between -2 and 2)\n");

@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:45 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 09:15:37 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 14:13:23 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,13 @@ int	main(int argc, char **argv)
 {
 	t_fractol	fractol;
 
-	if (argc != 2 && argc != 4)
+	if (argc < 2 && argc <= 5)
 		ft_print_errors(err_no_args, 1);
 	fractol.fractal = ft_parse_input_fractal(argv[1]);
+	fractol.active_overlay = 0;
+	if ((argc == 3 || (argc == 5 && fractol.fractal == julia))
+		&& !ft_strcmp(argv[2], "-o"))
+		fractol.active_overlay = 1;
 	if (fractol.fractal == julia)
 		ft_get_julia_input(&fractol, argc, argv);
 	if (*ft_get_input_error())

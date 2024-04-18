@@ -17,6 +17,7 @@ CFILES := \
 	fractals/ft_mandelbrot.c \
 	fractals/ft_julia.c \
 	fractals/ft_burningship.c \
+	overlay/ft_overlay.c \
 
 CFILES := $(addprefix src/, $(CFILES))
 
