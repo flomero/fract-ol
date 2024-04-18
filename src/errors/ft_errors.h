@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:57:04 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 18:03:20 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 09:28:37 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@
 # define ERRMSG_INV_ARGS "Error: invalid number of arguments\n"
 # define ERRMSG_INV_FRACTAL "Error: invalid fractal\n"
 # define ERRMSG_INV_COLOR_MODE "Error: invalid color mode\n"
-# define ERRMSG_INV_JULIA_ARGS "Error: invalid number of arguments for julia\n"
+# define ERRMSG_INV_JULIA "Error: invalid arguments for julia\n"
 
 #endif

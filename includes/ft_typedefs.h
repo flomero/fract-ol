@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:32:00 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 18:04:26 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 09:26:44 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ typedef struct s_fractol
 	t_dpoint		center;
 	t_colormodes	colormode;
 	double			color_shift;
+	t_complex		julia;
 }					t_fractol;
 
 typedef enum e_errors
@@ -81,6 +82,7 @@ typedef enum e_errors
 	no_error,
 	err_no_args,
 	err_invalid_fractal,
+	err_invalid_julia,
 	err_mlx_init_failed,
 	err_mlx_new_image_failed,
 	err_mlx_image_to_window_failed

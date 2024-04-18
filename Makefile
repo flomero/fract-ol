@@ -14,6 +14,7 @@ CFILES := \
 	rendering/ft_colors.c \
 	rendering/ft_colormodes.c \
 	fractals/ft_mandelbrot.c \
+	fractals/ft_julia.c \
 
 CFILES := $(addprefix src/, $(CFILES))
 

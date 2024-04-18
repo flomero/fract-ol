@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:22:33 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 18:03:34 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 09:34:21 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	ft_print_errors(t_errors error, int exit_bool)
 		ft_putstr_fd(ERRMSG_INV_ARGS, 2);
 	else if (*ft_get_input_error() == err_invalid_fractal)
 		ft_putstr_fd(ERRMSG_INV_FRACTAL, 2);
+	else if (*ft_get_input_error() == err_invalid_julia)
+		ft_putstr_fd(ERRMSG_INV_JULIA, 2);
 	else if (*ft_get_input_error() == err_mlx_init_failed)
 		ft_putstr_fd(ERRMSG_MLX_INIT, 2);
 	else if (*ft_get_input_error() == err_mlx_new_image_failed)
@@ -38,5 +40,5 @@ void	ft_print_help(void)
 	ft_printf("Usage: ./fractol [fractal]\n");
 	ft_printf("Available Fractals:\n");
 	ft_printf("\tmandelbrot\n");
-	ft_printf("\tjulia\n");
+	ft_printf("\tjulia [re] [im] (re & im between -2 and 2)\n");
 }

@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 16:48:05 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 09:18:41 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,20 @@
 # include "MLX42/include/MLX42/MLX42.h"
 # include "ft_defines.h"
 # include "ft_typedefs.h"
+# include <math.h>
 
 // input parsing
 t_fractals	ft_parse_input_fractal(char *input);
 void		ft_init_mlx(t_fractol *fractol);
 void		ft_init_fractol(t_fractol *fractol);
+void		ft_get_julia_input(t_fractol *fractol, int argc, char **argv);
 
 // rendering
 void		ft_draw_image(t_fractol *fractol);
 uint32_t	ft_mandelbrot(t_fractol *fractol, int x, int y);
+uint32_t	ft_julia(t_fractol *fractol, int x, int y);
+void		ft_rot_julia(t_fractol *fractol);
+
 // color
 uint32_t	ft_get_color(t_fractol *fractol, int i);
 // color modes

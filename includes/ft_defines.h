@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:30:41 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 16:58:40 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 09:23:10 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,11 @@
 # define ZOOM_FACTOR 1.1
 # define MOVE_SIZE 5
 # define COLOR_SHIFT 0.01
+
+# define JULIA_DEFAULT_RE -0.7
+# define JULIA_DEFAULT_IM 0.27
+# define JULIA_ROT_ANGLE 0.1
+
+# define PI 3.14159265358979323846
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:45 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/17 16:47:28 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/18 09:15:37 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@ int	main(int argc, char **argv)
 {
 	t_fractol	fractol;
 
-	if (argc != 2)
+	if (argc != 2 && argc != 4)
 		ft_print_errors(err_no_args, 1);
 	fractol.fractal = ft_parse_input_fractal(argv[1]);
+	if (fractol.fractal == julia)
+		ft_get_julia_input(&fractol, argc, argv);
 	if (*ft_get_input_error())
 		ft_print_errors(0, 1);
-	ft_printf("Fractal: %d\n", fractol.fractal);
 	ft_init_fractol(&fractol);
 	mlx_loop_hook(fractol.mlx, &ft_keys_options, &fractol);
 	mlx_loop_hook(fractol.mlx, &ft_keys_movement, &fractol);
