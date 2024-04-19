@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:30:41 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 16:20:17 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/19 13:39:38 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,12 @@
 # define TITLE_MANDELBROT "Mandelbrot"
 # define TITLE_JULIA "Julia"
 # define TITLE_BURNINGSHIP "Burningship"
+
+# define FIRST_LINE_OFFSET 20
+# define LINE_SPACE 20
+
+# define L_TITLE 12
+# define L_ZOOM 14
+# define L_ITERATIONS 15
 
 #endif

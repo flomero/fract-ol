@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:22:33 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 15:06:18 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/19 10:35:28 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,5 @@ void	ft_print_help(void)
 	ft_printf("Available Fractals:\n");
 	ft_printf("\tmandelbrot\n");
 	ft_printf("\tjulia [re] [im] (re & im between -2 and 2)\n");
+	ft_printf("\tburningship\n");
 }

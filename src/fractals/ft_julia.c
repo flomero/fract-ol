@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 08:54:15 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 14:06:28 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/19 13:49:00 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,7 @@ uint32_t	ft_julia(t_fractol *fractol, int x, int y)
 			break ;
 		i++;
 	}
+	if (i == fractol->max_iter)
+		return (0x000000FF);
 	return (ft_get_color(fractol, i));
 }
