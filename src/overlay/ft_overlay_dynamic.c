@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:11:09 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/18 16:22:34 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:22:35 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ft_ov_zoom(t_fractol *fractol, int x, int y)
 	fractal_old = fractol->fractal;
 	if (image)
 		mlx_delete_image(fractol->mlx, image);
-	zoom = ft_itoa(fractol->zoom / 300);
+	zoom = ft_itoa(fractol->zoom / INIT_ZOOM);
 	if (!zoom)
 		ft_print_errors(err_malloc_failed, 1);
 	image = mlx_put_string(fractol->mlx, zoom, x, y);
