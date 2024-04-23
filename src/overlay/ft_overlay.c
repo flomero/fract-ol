@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:22:48 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/19 13:43:35 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/23 14:38:42 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,11 @@ void	ft_overlay_text(t_fractol *fractol)
 		ft_linenbr(7));
 	mlx_put_string(fractol->mlx, "Rotate Color Fast: Numpad 5", x,
 		ft_linenbr(8));
-	mlx_put_string(fractol->mlx, "Reset Zoom: R", x, ft_linenbr(9));
-	mlx_put_string(fractol->mlx, "Exit: ESC", x, ft_linenbr(10));
+	mlx_put_string(fractol->mlx, "Change Iter: Numpad +/-", x, ft_linenbr(9));
+	mlx_put_string(fractol->mlx, "Rotate (Julia only): Space", x,
+		ft_linenbr(10));
+	mlx_put_string(fractol->mlx, "Reset Zoom: R", x, ft_linenbr(11));
+	mlx_put_string(fractol->mlx, "Exit: ESC", x, ft_linenbr(12));
 	mlx_put_string(fractol->mlx, "Fractal", x, ft_linenbr(L_TITLE));
 	mlx_put_string(fractol->mlx, "Zoom:", x, ft_linenbr(L_ZOOM));
 	mlx_put_string(fractol->mlx, "Iterations:", x, ft_linenbr(L_ITERATIONS));

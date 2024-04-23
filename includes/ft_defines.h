@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:30:41 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/23 11:35:07 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/23 14:38:23 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@
 # define FIRST_LINE_OFFSET 20
 # define LINE_SPACE 20
 
-# define L_TITLE 12
-# define L_ZOOM 14
-# define L_ITERATIONS 15
+# define L_TITLE 14
+# define L_ZOOM 16
+# define L_ITERATIONS 17
 
 #endif
