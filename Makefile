@@ -21,6 +21,7 @@ CFILES := \
 	overlay/ft_overlay.c \
 	overlay/ft_overlay_lines.c \
 	overlay/ft_overlay_dynamic.c \
+	overlay/ft_dtoa.c \
 
 CFILES := $(addprefix src/, $(CFILES))
 

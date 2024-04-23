@@ -6,7 +6,7 @@
 /*   By: flfische <flfische@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:32 by flfische          #+#    #+#             */
-/*   Updated: 2024/04/19 13:36:26 by flfische         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:42:05 by flfische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void		ft_ov_zoom(t_fractol *fractol, int x, int y);
 void		ft_ov_iterations(t_fractol *fractol, int x, int y);
 int			ft_linenbr(int i);
 void		ft_ov_title(t_fractol *fractol, int x, int y);
+char		*ft_dtoa(double n, int precision);
 
 // error handling
 t_errors	*ft_get_input_error(void);
