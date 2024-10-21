@@ -73,6 +73,7 @@ $(MLX42):
 	@echo "$(YELLOW)Compiling mlx42...$(NC)"
 	if [ ! -d $(MLX42_DIR)/build ]; then mkdir -p $(MLX42_DIR)/build; fi
 	@git submodule update --remote --init -q
+	@cd $(MLX42_DIR) && git checkout tags/v2.3.4
 	@cd $(MLX42_DIR)/build && cmake .. && make -j4
 
 clean:
